@@ -1,1 +1,92 @@
-<p>basics-page works!</p>
+<p-panel header="Basic Pipes" class="p-1">
+  <p>
+    Included pipes in Angular - Usually in the Common Module
+  </p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="uppercase">
+      <p>
+        <strong>original</strong> string: {{nameLowercase}}
+        <br>
+        with <strong>uppercase</strong> pipe: {{nameLowercase | uppercase}}
+      </p>
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="lowercase">
+      <p>
+        <strong>original</strong> string: {{nameUppercase}}
+        <br>
+        with <strong>lowercase</strong> pipe: {{nameUppercase | lowercase}}
+      </p>
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="titlecase">
+      <p>
+        <strong>original</strong> string: {{nameCamelcase}}
+        <br>
+        with <strong>lowercase</strong> pipe: {{nameCamelcase | titlecase}}
+      </p>
+    </p-card>
+  </div>
+  <div class="col-4 w-full">
+    <p-card header="date">
+      <p>original date: {{date}}</p>
+      <table>
+        <tr>
+          <th>Data pipe</th>
+          <th>Final result</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>date | date</td>
+          <td>{{ date | date }}</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>date | date :'short'</td>
+          <td>{{ date | date :'short' }}</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>date | date :'long'</td>
+          <td>{{ date | date :'long' }}</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>date | date :'MMMM'</td>
+          <td>{{ date | date :'MMMM' }}</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>date | date :'MMMM dd, yyyy'</td>
+          <td>{{ date | date :'MMMM dd, yyyy' }}</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>date | date :'long':'GMT-6'</td>
+          <td>{{ date | date :'long':'GMT-6' }}</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>date | date :'long':'GMT-4'</td>
+          <td>{{ date | date :'long':'GMT-4' }}</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>date | date :'long':'':'es'</td>
+          <td>{{ date | date :'long':'':'es-419' }}</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>date | date :'long':'':'fr-CA'</td>
+          <td>{{ date | date :'long':'':'fr-CA' }}</td>
+          <td>-</td>
+        </tr>
+      </table>
+    </p-card>
+  </div>
+</div>
